@@ -1,12 +1,12 @@
-# PCF8574
+# SHT3X
 
-A MakeCode-PXT extension for the PCF8574(AT) I2C device which can be used an 8-bit I/O expander.
+A MakeCode/PXT extension for the Sensirion's SHT3x digital temperature and humidity sensor.
 
 ![](icon.png)
 
 ## Wiring
 
-Pins (PCF8574 module <--> Microbit Edge Connector)
+Pins (GY-SHT3x module <--> Microbit Edge Connector)
 - Vcc: 3V pin (3.3V)
 - SCL: Pin 19
 - SDA: Pin 20
@@ -27,5 +27,5 @@ Thank to IoT Engineering Education @ KMUTNB
 
 ## Update
 
-2019-Feb-18
+2019-Feb-20
 

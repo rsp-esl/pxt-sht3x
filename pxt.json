@@ -1,10 +1,10 @@
 {
-    "name": "PCF8574",
-    "version": "0.0.2",
-    "description": "PCF8574 Makecode extension for Microbit",
+    "name": "SHT3X",
+    "version": "0.0.1",
+    "description": "A Makecode/PXT library for the SHT3X digital temperature and humidity sensor",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "devices": "*"
     },
     "files": [
         "README.md",
