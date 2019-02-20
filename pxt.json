@@ -1,7 +1,7 @@
 {
     "name": "SHT3X",
     "version": "0.0.1",
-    "description": "A Makecode/PXT library for the SHT3X digital temperature and humidity sensor",
+    "description": "A Makecode/PXT-Microbit library for the SHT3X digital temperature and humidity sensor",
     "dependencies": {
         "core": "*"
     },
