@@ -34,7 +34,7 @@ namespace SHT3X {
         */        
         //% blockId="device_set_address" block="set the device address %addr"
         //% weight=40 blockGap=8
-        //% parts="SHT3X"
+        //% parts="SHT3X.Device"
         public setAddress( addr : number ) : void {
             this.i2c_addr = addr         
         }
@@ -44,7 +44,7 @@ namespace SHT3X {
         */        
         //% blockId="device_get_address" block="get the device address"
         //% weight=10 blockGap=8
-        //% parts="SHT3X"
+        //% parts="SHT3X.Device"
         public getAddress() : number { 
             return this.i2c_addr
         }
@@ -54,7 +54,7 @@ namespace SHT3X {
         */        
         //% blockId="device_read_data" block="read data from sensor"
         //% weight=30 blockGap=8
-        //% parts="SHT3X"
+        //% parts="SHT3X.Device"
         public readData() : number [] {
 			let values: number[] = [0, 0]
             let wbuf = pins.createBuffer(2)
@@ -133,6 +133,7 @@ namespace SHT3X {
      */
     //% blockId="SHT3X_SCAN_DEVICES" block="SHT3X scan devices"
     //% weight=100 blockGap=8
+    //% parts="SHT3X"
     export function scanDevices() : number[] {
         let buf = pins.createBuffer(1)
         buf.setNumber(NumberFormat.UInt8LE, 0xff, 0)
