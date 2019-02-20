@@ -22,7 +22,8 @@ serial.writeLine('\r\nTest SHT3X sensor reading....\r\n')
 basic.forever(function () {
     let v = dev.readData()
     if (v != null) {
-        let t = v[0], h = v[1]
+        let t = dev.getTemperature()
+        let h = dev.getHumidity()
         let str = ''
         str += 'temperature: ' + toFixedString(t,2) + ' deg.C, '
         str += 'humidity: ' + toFixedString(h,2) + ' %RH'

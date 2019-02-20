@@ -27,6 +27,8 @@ namespace SHT3X {
     export class Device {
         i2c_addr: number 
         err_msg: string 
+        _temp: number 
+        _humid: number 
 		
         /**
         * Set the address of the device 
@@ -85,7 +87,8 @@ namespace SHT3X {
 
 				if (this.crc8(t_hi, t_lo) == t_crc) { // crc ok for temperature
 					t_value  = ((t_value * 175.0) / 65535) - 45 // temperature in Celsius.
-					values[0] = t_value
+                    values[0] = t_value
+                    this._temp = t_value 
                 } else {
                     this.err_msg = 'CRC failed (Temperature)'
 					return null
@@ -94,6 +97,7 @@ namespace SHT3X {
 				if (this.crc8(h_hi, h_lo) == h_crc) { // crc ok for humidity
 					h_value =  ((h_value * 100.0) / 65535) // relative humidity
 					values[1] = h_value
+                    this._humid = h_value 
 				} else {
                     this.err_msg = 'CRC failed (Humidity)'
 					return null
@@ -102,7 +106,27 @@ namespace SHT3X {
 			} 
             this.err_msg = 'I2C read failed'
 			return null
-        }    
+        }  
+
+        /**
+        * get temperature value
+        */        
+        //% blockId="device_get_temperature" block="%device|get temperature value (deg.C)"
+        //% weight=50 blockGap=8
+        //% parts="SHT3X"
+        public getTemperature(): number {
+            return this._temp
+        }
+
+        /**
+        * get humidity value
+        */        
+        //% blockId="device_get_humidity" block="%device|get humidity value"
+        //% weight=60 blockGap=8
+        //% parts="SHT3X"
+        public getHumidity(): number {
+            return this._humid
+        }
 
         /**
         * get error message
