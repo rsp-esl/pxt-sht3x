@@ -107,7 +107,7 @@ namespace SHT3X {
         /**
         * get error message
         */        
-        //% blockId="device_get_error_msg" block="get error message"
+        //% blockId="device_get_error_msg" block="%device|get error message"
         //% weight=30 blockGap=8
         //% parts="SHT3X"
         public getErrorMessage() : string {
