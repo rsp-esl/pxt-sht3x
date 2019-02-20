@@ -1,24 +1,31 @@
-# SHT3X
+# PCF8574
 
+A MakeCode-PXT extension for the PCF8574(AT) I2C device which can be used an 8-bit I/O expander.
 
+![](icon.png)
 
-## TODO
+## Wiring
 
-- [ ] Add a reference for your blocks here
-- [ ] Add "icon.png" image (300x200) in the root folder
-- [ ] Add "- beta" to the GitHub project description if you are still iterating it.
-- [ ] Turn on your automated build on https://travis-ci.org
-- [ ] Use "pxt bump" to create a tagged release on GitHub
-- [ ] Get your package reviewed and approved https://makecode.microbit.org/packages/approval
-
-Read more at https://makecode.microbit.org/packages/build-your-own
+Pins (PCF8574 module <--> Microbit Edge Connector)
+- Vcc: 3V pin (3.3V)
+- SCL: Pin 19
+- SDA: Pin 20
+- Gnd: Gnd pin (0V)
 
 ## License
 
 MIT
 
-## Supported targets
+## Supported Targets
 
 * for PXT/microbit
-(The metadata above is needed for package search.)
+
+## Acknowledgement
+
+Thank to IoT Engineering Education @ KMUTNB
+[https://www.facebook.com/iot.kmutnb/](https://www.facebook.com/iot.kmutnb/)
+
+## Update
+
+2019-Feb-18
 
