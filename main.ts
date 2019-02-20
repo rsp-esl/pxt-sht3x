@@ -33,7 +33,7 @@ namespace SHT3X {
         * @param addr the new address of this device 
         */        
         //% blockId="device_set_address" block="%device|set the device address %addr"
-        //% weight=40 blockGap=8
+        //% weight=10 blockGap=8
         //% parts="SHT3X"
         public setAddress( addr : number ) : void {
             this.i2c_addr = addr         
@@ -43,7 +43,7 @@ namespace SHT3X {
         * Get the address of the device
         */        
         //% blockId="device_get_address" block="%device|get the device address"
-        //% weight=10 blockGap=8
+        //% weight=20 blockGap=8
         //% parts="SHT3X"
         public getAddress() : number { 
             return this.i2c_addr
@@ -53,7 +53,7 @@ namespace SHT3X {
         * read data from sensor
         */        
         //% blockId="device_read_data" block="%device|read data from sensor"
-        //% weight=20 blockGap=8
+        //% weight=30 blockGap=8
         //% parts="SHT3X"
         public readData() : number [] {
 			let values: number[] = [0, 0]
@@ -108,7 +108,7 @@ namespace SHT3X {
         * get error message
         */        
         //% blockId="device_get_error_msg" block="%device|get error message"
-        //% weight=30 blockGap=8
+        //% weight=40 blockGap=8
         //% parts="SHT3X"
         public getErrorMessage() : string {
             return this.err_msg
