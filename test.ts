@@ -16,7 +16,7 @@ function toFixedString(x: number, ndigits: number = 3) {
     return s
 }
 
-let dev = SHT3X.create( SHT3xAddress.ADDR_0x44 )
+let dev = SHT3X.create( SHT3X.Address.ADDR_0x44 )
 serial.writeLine('\r\nTest SHT3X sensor reading....\r\n')
 
 basic.forever(function () {

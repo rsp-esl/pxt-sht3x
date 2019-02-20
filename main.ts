@@ -6,14 +6,6 @@
 // - https://cdn-shop.adafruit.com/product-files/2857/Sensirion_Humidity_SHT3x_Datasheet_digital-767294.pdf
 ///////////////////////////////////////////////////////////////////////////////
 
-enum SHT3xAddress {
-    // 7-bit I2C addresses for SHT3X
-    //% block="0x44"
-    ADDR_0x44 = 0x44,  // default
-    //% block="0x45"
-    ADDR_0x45 = 0x45
-}
-
 /*
  * SHT3X functions
  */
@@ -21,6 +13,14 @@ enum SHT3xAddress {
 //% color="#2c7f55" weight=100  
 namespace SHT3X {
 
+    export enum Address {
+        // 7-bit I2C addresses for SHT3X
+        //% block="0x44"
+        ADDR_0x44 = 0x44,  // default
+        //% block="0x45"
+        ADDR_0x45 = 0x45
+    }
+    
     /**
 	* An SHT3X Device
 	*/
@@ -154,7 +154,7 @@ namespace SHT3X {
     //% weight=100 blockGap=8
     //% parts="SHT3X"
     //% blockSetVariable=device
-    export function create( addr : SHT3xAddress = SHT3xAddress.ADDR_0x44 ) : Device { 
+    export function create( addr : Address = Address.ADDR_0x44 ) : Device { 
         let device = new Device()
         device.i2c_addr = addr
         return device
